@@ -1,0 +1,29 @@
+div {
+}
+
+.box,
+.ball {
+  border: solid;
+  border-width: 3px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rotate {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ball {
+  border-radius: 50%;
+  transform: scale(0);
+}
+
+.slideL,
+.slideR {
+  //   position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
