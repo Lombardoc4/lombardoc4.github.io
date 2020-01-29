@@ -1,17 +1,38 @@
-body{
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Make sure body is entire page
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+body {
     height: 100%;
     width: 100%;
     overflow: hidden;
 }
-    #container {
-        position: absolute;
+
+#container {
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     overflow: auto;
-    }
+}
+p {  
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    margin: 0;        
+}
 
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    letter-spacing: -.16rem;
+    margin: 0;
+    text-align: center;
+    text-decoration: underline;
+}
+.d-none{
+    display: none;
+}
 .home {
     background-image: url(../images/idc2.jpg);
     background-size: cover;
@@ -19,23 +40,126 @@ body{
     width: 100%;
 }
 
-p{  
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    margin: 0;        
+
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~
+// Preloader
+// ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.preloader{
+    pointer-events: none;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 
-.iconLobby {
+.preload{
+    pointer-events: none;
+}
+
+.preloader-background{
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    &.on{
+        transition: opacity 2s;
+        opacity: 0;
+    }
+}
+
+.preload-dark{
+    background-color: #000000;
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    &.on{
+        transition: border-radius 0.5s, transform 2s 0.1s cubic-bezier(0.19, 1, 0.22, 1);
+        border-radius: 100%;
+
+    }
+}
+
+.preloader-top-left{
+    top: 0;
+    left: 0;
+    transform: scale(1) translate(-50%, -50%);
+    &.on{
+        transform-origin: top left;
+        transform: scale(0) translate(-100%, -100%);
+    }
+}
+.preloader-top-right{
+    top: 0;
+    right: 0;
+    transform: scale(1) translate(50%, -50%);
+    &.on{
+        transform-origin: top right;
+        transform: scale(0) translate(100%, -100%);
+    }
+}
+.preloader-bottom-left{
+    bottom: 0;
+    left: 0;
+    transform: scale(1) translate(-50%, 50%);
+    &.on{
+        transform-origin: bottom left;
+        transform: scale(0) translate(-100%, 100%);
+    }
+}
+.preloader-bottom-right{
+    bottom: 0;
+    right: 0;
+    transform: scale(1) translate(50%, 50%);
+    &.on{
+        transform-origin: bottom right;
+        transform: scale(0) translate(100%, 100%);
+    }
+}
+.preloader-text{
+    color: white;
+    font-size: 50px;
+    font-weight: 900;
+    text-shadow: 0 0 10px slategrey;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &.on{
+        display: none;
+    }
+}
+
+
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~
+// The Home Icons
+// ~~~~~~~~~~~~~~~~~~~~~~~~~
+.icon-lobby {
     position: absolute;
     bottom: 50px;
     right: 0;
+    // left:50%;
+    // transform: translateX(-50%);
+    flex-direction: column;
+    display: flex;
+    align-items: flex-end;
 }
-.deskIcon{
+.desk-icon{
     width: 100px;
 }
-
-.folder{
-    // position: relative;
+.folder-icon{
     margin: auto;
     background-image: url(../images/folder.jpg);
     background-size: contain;
@@ -43,7 +167,7 @@ p{
     height: 65px;
     width: 70px;
 }
-.folderText{
+.icon-text{
     font-size: 16px;
     letter-spacing: -0.03em;
     overflow-wrap: break-word;
@@ -52,123 +176,261 @@ p{
     text-shadow: 0px 1px 1px #000, 0px 0px 5px #000
 }
 
-.redClose{
+.getting-started-icon{
+    margin: auto;
+    background-image: url(../images/manual.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 55px;
+    width: 70px;
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~
+// A Window 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~
+.red-close{
     position: absolute;
-    top: -25px;
-    right: 0;
+    bottom: -25px;
+    right: 5px;
     background-color: red;
-    border-radius: 100%;
-    width: 19px;
+    border-radius: 10px;
+    width: 50px;
     height: 19px;
 }
-.windowTitle{
-    // center this
-    // width: 40%;
+.window-title{
+    pointer-events: none;
     position: absolute;
-    top: -25px;
-    
+    bottom: -30px;
+    font-size: 22px;
     text-align: center;
     width: 100%;
 }
 
-.folderBody {
-    background-image: url("../art/dalia.jpg");
-    background-size: 150%;
-    background-position: 0%;
-    background-repeat: no-repeat;
-    border: 1px solid;
-    position: relative;
-    height: 100%;
-    width: 100%;
+// ~~~~~~~~~~~~~~~~~~~~~~~~
+// A Folder
+// ~~~~~~~~~~~~~~~~~~~~~~~~
+.open-folder{
+    bottom: 10%;
+    background-color: #fff;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.folder-body {
+    border: 1px solid grey;
     overflow: scroll;
 }
-
-.folderContent{
-    // position: relative;
-    height: 40px;
+.folder-content{
+    height: 50px;
     width: 100%;
-    border-bottom: solid 1px;
+    // border-top: solid 1px;
     display: flex;
-    justify-content: center;
 }
 
 
-.crisFace, .openFile, .openInfo, .openFolder{
+// ~~~~~~~~~~~~~~~~~~~~
+// A File
+// ~~~~~~~~~~~~~~~~~~~~
+.open-file, .open-info, .open-folder{
     position: absolute;
-    border: solid 5px lightgray;
-    border-top: solid 30px lightgray;
+    left: 50%;
+    transform: translate(-50%);
+    border: solid 1px rgb(228, 228, 228);
+    border-bottom: solid 30px rgb(228, 228, 228);
+    box-shadow: 0 0 3px 1px black;
     border-radius: 5px;
+    width: calc(100vw - 5px);
+
 }
 
-.openInfo, .openFile{
+.open-file{
+    top: 50%;
+    transform: translate(-50%, -50%);
     height: 90vw;
-    width: 90vw;
     background-color: white;
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
-.openInfo{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 85vh;
-    width: 80vw;
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Info
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~
+.open-info{
+    height: 80%;
+    bottom: 10%;
 }
 
-.openFolder{
-    background-color: #fff;
-    height: 100vw;
-    width: 100vw;
-    max-width: 300px;
+.info-body{
+    border: solid 1px grey;
+    // text-align: center;
+    border-radius: 5px;
+    height: 100%;
+    width: calc(100% - 2px);
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    &.on{
+        transition: opacity 0.6s;
+        opacity: 1;
+    }
 }
 
+.toolbelt{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tool-row{
+    height: 35px;
+    width: 100%;
+    display: flex;
+
+    img{
+        padding: 5px;
+    }
+}
+
+.tooltip{
+    visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  left: 10px;
+  top: 120%;
+  z-index: 1;
+}
+
+.tool:hover .tooltip {
+    visibility: visible;
+}
+
+.tool{
+    position: relative;
+    height: 100%;
+    margin: auto;
+}
+
+.mqq{
+    width: 90%;
+    margin: auto;
+}
+
+.rnp{
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+.mission{
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+}
+.prop-logo{
+    width: 60%;
+    padding: 20px;
+    padding-top: 110px;
+    padding-bottom: 90px;
+    margin: auto;
+    transform: scale(0);
+    &.on {
+        transition: all 1.5s 1s ease-out;
+        transform: scale(1);
+    }
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~
+// Info Animations
+// ~~~~~~~~~~~~~~~~~~~~~~~~~
+.spin-in{
+    transform: scale(0) rotate(360deg);
+     &.on {
+         transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.25);
+         transform: scale(1) rotate(0);
+     }
+}
+.slide-in{
+    transform: translateY(-100px);
+     &.on {
+         transition: all 0.6s ease-out;
+         transform: translateY(0);
+     }
+}
+.scale-in{
+    transform: scale(0);
+
+     &.on {
+         transition: all 1s 0.6s linear;
+         transform: scale(1);
+    }
+}
+.spin-out-propeller{
+    position: absolute;
+    z-index: 1;
+    opacity: 1;
+     &.on {
+        animation: spinPropeller 1.5s forwards
+    }
+}
+@keyframes spinPropeller {
+    0% {transform: rotate(0deg); opacity: 1;}
+    70% {transform: rotate(360deg);}
+    99%{transform: scale(20); opacity: 0;}
+    100%{transform: scale(1); opacity: 0;}
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~
+// The Menu
+// ~~~~~~~~~~~~~~~~~~~~~
 .menu{
     position: absolute;
     z-index: 10;
     bottom: 0vh;
-    background-color: lightgray;
+    background-color: rgb(228, 228, 228);
     box-shadow: 0 0 5px #000;
-    width: 99.5vw;
+    width: 100vw;
     height: 30px;
-    border: solid 1px;
+    // border: solid 1px;
 }
-
-.menuBtn{
+.menu-btn{
     position: absolute;
     text-align: center;
     font-size: 22px;
     width: 25%;
-    height: 28px;
-    border: solid 1px;
-    border-right: solid 2px;
+    height: 26px;
+    border: solid 2px;
+    // border-right: solid 2px;
 }
-
-.openMenu{
+.open-menu{
     border: 2px solid;
     border-bottom: none;
-    background-color: lightgrey;
+    background-color: white;
     position: absolute;
-    bottom: 28px;
+    bottom: 30px;
     height: calc(100vh - 30px);
+    max-height: 400px;
     width: calc(100vw - 4px);
 }
-
-.menuRow{
-    width: 100%;
-    height: 14%;
+.menu-row{
+    height: 20%;
     border-bottom: 1px solid #000; 
-    background-color: rgba(235, 235, 235, 0.452);
+    background-color: white;
     &.on {
-        background-color: rgb(146, 146, 146);
+        background-color: white;
         box-shadow: inset 0px 0px 5px #000;
     }
 }
-
-
-.menuText{
-    font-size: 17px;
+.menu-text{
+    font-weight: 600;
+    font-size: 22px;
     letter-spacing: -0.05em;
     padding-left: 5%;
     position: relative;
@@ -179,28 +441,55 @@ p{
     }
 }
 
-.crisFace, .crisFaceIconPic{
-    background-image: url(../images/cestMoi.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+
+// ~~~~~~~~~~~~~~~~~~~~~~~
+// Menu Custom
+// ~~~~~~~~~~~~~~~~~~~~~~~
+.belt{
+    top: -50%;
+    position: relative;
+    float: right;
+    display: flex;
 }
 
-.openFile{
-    background-position: 80%;
-}
-// .crisFaceIcon{
-//     position: absolute;
-//     top: 5vh; 
-//     right: 5vw;
+// .toolbelt{
+//     background-image: url("../images/beltBackground.jpg");
+//     background-size: 300%;
+//     background-position: 50% 45%;
 // }
 
-.crisFaceIconPic{
-    margin: auto;
-    height: 10vh;
-    width: 60px; 
-    border-radius: 10px;
-    background-size: 125%;
-    background-position: 100%;
+.toolbelt-tool{
+    position: absolute;
+    right: 0;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    opacity: 0;
+}
+.javascript{
+    background-image: url("/images/javascript.png");
+    animation: toolBeltSlide 8s infinite;
+}
+.html{
+    background-image: url("/images/htmlLogo.png");
+    animation: toolBeltSlide 8s 2s infinite;
+}
+.react{
+    background-image: url("/images/reactLogo.png");
+    animation: toolBeltSlide 8s 4s infinite;
+}
+.mongo{
+    background-image: url("/images/mongoLeaf.png");
+    animation: toolBeltSlide 8s 6s infinite;
+}
+
+@keyframes toolBeltSlide{
+    0% { opacity: 1; transform: scale(0);}
+    25% { transform: scale(0.5);}
+    50% { transform: scale(1) translateX(-50px);}
+    75% { opacity: 1; transform: translateX(-100px) scale(0.5) ;}
+    99%{ opacity: 1; transform: translateX(-100px) scale(0) ;}
+    100%{ opacity: 0; transform: translateX(-100px) scale(0) ;}
 }
 
 .earth{
@@ -211,7 +500,6 @@ p{
     background-size: 100%;
     background-repeat: no-repeat;
     transition: background-size 2s ;
-
     &.on{
         background-image: url(../images/earth2.gif);
         transition: background-size 5s ;
@@ -227,25 +515,25 @@ p{
     background-repeat: no-repeat;
     &.on{
         animation: wisdom 20s infinite;
-
     }
 }
-
-@keyframes wisdom{
-    0%, 100%{
-        background-position: 0% 100%;
-    }
-    50% {
-        background-position: 0% 65%;
-    }
+#words{
+    width: 95%;
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.quote{
+    font-size: 25px;
+    font-style: italic;
+    text-align: center;
 }
 
 .restart{
     background-image: url(../images/restart.jpg);
     background-size: 100%;
-    background-position: 0% 50%;
-
-    // put something to go "are you sure"
+    background-position: 35%;
 }
 
 .contact{
@@ -258,17 +546,14 @@ p{
         animation: contact 10s infinite;
     }
 }
-
-@keyframes contact {
-    0%, 100%{
-        background-color: #fff;
-        background-image: url(../images/lomLogo.jpg);
-    }
-    50% {
-        background-color: #fff;
-        background-image: url(../images/gmailicon.jpg);
-
-    }
+.contact-header{
+    width: 70%;
+    margin: auto;
+    border-radius: 50%;
+    /* border: solid 1px; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px;
 }
 
 .adventure{
@@ -276,10 +561,16 @@ p{
     background-position: 20% 55%;
     background-size: 120%;
     &.on {
-        animation: adventure 10s infinite;
+        animation: adventure 14s infinite;
     }
 }
+.adventure-header{
+    width: 100%;
+}
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~
+// Menu Animations
+// ~~~~~~~~~~~~~~~~~~~~~~~~
 @keyframes adventure {
     0%, 100%{
         background-size: 120%;
@@ -288,10 +579,21 @@ p{
         background-size: 110%;
     }
 }
-// 
-//  Fake Bootstrap
-// 
-
-.d-none{
-    display: none;
+@keyframes contact {
+    0%, 100%{
+        background-color: #fff;
+        background-image: url(../images/lomLogo.jpg);
+    }
+    50% {
+        background-color: #fff;
+        background-image: url(../images/gmailicon.jpg);
+    }
+}
+@keyframes wisdom{
+    0%, 100%{
+        background-position: 0% 100%;
+    }
+    50% {
+        background-position: 0% 65%;
+    }
 }

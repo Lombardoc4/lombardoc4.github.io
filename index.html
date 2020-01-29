@@ -5,60 +5,560 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/index.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300&display=swap" rel="stylesheet">
+    <link href="fonts/Montserrat-Regular.ttf" rel="application/x-font-ttf">
+    <link href="fonts/Montserrat-Medium.ttf" rel="application/x-font-ttf">
+    <link href="fonts/Montserrat-SemiBold.ttf" rel="application/x-font-ttf">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,900&display=swap" rel="stylesheet">
+    
     <link rel="icon" href="images/lomLogo.jpg" sizes="16x16 32x32" type="image/jpg">
     <title>Cris Lombardo</title>
 </head>
 
 <body style="margin: 0;">
 
+    <!-- Load All Images -->
+    <span class="d-none" id="hidden-images">
+        <!-- Use JS to fill with images -->
+        <img src="./images/manual.png" alt="">
+        <img src="./images/beltBackground.jpeg" alt="">
+        <img src="./images/propLogo.png" alt="">
+        <img src="./images/propSpinner.png" alt="">
+        <img src="./images/reactLogo.png" alt="">
+        <img src="./images/restart.jpg" alt="">
+        <img src="./images/RNP_Logo.png" alt="">
+        <img src="./images/rnpPic1.jpg" alt="">
+        <img src="./images/rnpPic2.jpg" alt="">
+        <img src="./images/rnpPic3.jpg" alt="">
+        <img src="./images/scrub.jpeg" alt="">
+        <img src="./images/valley.jpg" alt="">
+        <img src="./images/wisdom.jpg" alt="">
+        <img src="./images/x1.jpg" alt="">
+        <img src="./images/x16.jpg" alt="">
+        <img src="./images/x4.jpg" alt="">
+        <img src="./images/x9.jpg" alt="">
+        <img src="./images/adventure.jpg" alt="">
+        <img src="./images/cestMoi.jpg" alt="">
+        <img src="./images/contact.JPG" alt="">
+        <img src="./images/css3Logo.png" alt="">
+        <img src="./images/dalia.jpg" alt="">
+        <img src="./images/earth.gif" alt="">
+        <img src="./images/earth2.gif" alt="">
+        <img src="./images/earthStatic.jpg" alt="">
+        <img src="./images/flower.jpg" alt="">
+        <img src="./images/folder.jpg" alt="">
+        <img src="./images/gmailicon.jpg" alt="">
+        <img src="./images/heart.jpeg" alt="">
+        <img src="./images/htmlLogo.png" alt="">
+        <img src="./images/hydroPonics.jpg" alt="">
+        <img src="./images/idc2.jpg" alt="">
+        <img src="./images/illuminat.jpeg" alt="">
+        <img src="./images/illustratorLogo.png" alt="">
+        <img src="./images/javascript.png" alt="">
+        <img src="./images/lomLogo.jpg" alt="">
+        <img src="./images/mirage.jpg" alt="">
+        <img src="./images/mongoLeaf.png" alt="">
+        <img src="./images/MQQ.png" alt="">
+        <img src="./images/nodeLogo.png" alt="">
+        <img src="./images/PEM.jpg" alt="">
+        <img src="./images//photshotLogo.png" alt="">
+    </span>
+
+    <div class="preloader">
+        <span class="preload preloader-background"></span>
+        <span class="preload preload-dark preloader-top-left"></span>
+        <span class="preload preload-dark preloader-top-right"></span>
+        <span class="preload preload-dark preloader-bottom-left"></span>
+        <span class="preload preload-dark preloader-bottom-right"></span>
+        <p class="preload preloader-text">Loading...</p>
+    </div>
+
+    <!-- Home "Page" -->
     <div class="home" id="container">
-        <div class="iconLobby">
-            <div class="deskIcon crisFaceIcon">
-                <div class="crisFaceIconPic"></div>
-                <p class="folderText">CestMoi.jpg</p>
+        <div class="cest-moi">
+
+        </div>
+        <div class="icon-lobby">
+            <div style="display: flex; align-items: baseline; margin-bottom: 10px;">
+                <div class="desk-icon getting-started">
+                    <div class="getting-started-icon"></div>
+                    <p class="icon-text" style="pointer-events: none;">Getting-Started.info</p>
+                </div>
+                <div class="desk-icon">
+                    <div class="desk-icon"></div>
+                    <p class="icon-text">Mission.info</p>
+                </div>
+                <div class="desk-icon">
+                    <div class="desk-icon"></div>
+                    <p class="icon-text">Contact.info</p>
+                </div>
             </div>
-            <div class="deskIcon" >
-                <div class="folder"></div>
-                <p class="folderText">Code</p>
-            </div>
-            <div class="deskIcon">                
-                <div class="folder"></div>
-                <p class="folderText">Nature</p>
-            </div>
-            <div class="deskIcon">      
-                <div class="folder"></div>
-                <p class="folderText">Art</p>            
+            <div style="display: flex; align-items: baseline;">
+                <div class="desk-icon" >
+                    <div class="folder-icon"></div>
+                    <p class="icon-text">Code</p>
+                </div>
+                <div class="desk-icon">                
+                    <div class="folder-icon"></div>
+                    <p class="icon-text">Nature</p>
+                </div>
+                <div class="desk-icon">      
+                    <div class="folder-icon"></div>
+                    <p class="icon-text">Art</p>            
+                </div>
             </div>
         </div>
         <div class="menu">
-            <p class="menuBtn" id="menuBtn">Menu</p>
+            <p class="menu-btn" id="menu-btn">Menu</p>
         </div>
     </div>
 
-
 <!-- this will be the windows with the info for the projects -->
 
+<!-- Container -->
+    <!-- Header -->
+    <!-- Role -->
+    <!-- Brief summary what what I did -->
+    <!-- IMG -->
+    <!-- More details -->
+    <!-- IMG -->
+    <!-- More details -->
+    <!-- ... etc -->
 
+    <!-- MENU info-->
+    <!-- Toolbelt -->
+    <div class="d-none" id="Toolbelt">
+        
+    </div>
+
+    <!-- Adventures -->
+    <div class="d-none" id="Adventures">
+        <div class="info-header">
+            <div style="display: flex; width: 100%; height: auto;">
+                <img class="animate adventure-header" src="./images/adventure.jpg" alt="TheMission">
+            </div>
+            <p style="font-size: 24px; font-weight: 900; width: 255px; margin: auto; text-align: center;">
+                Adventures
+            </p>
+            <p style="font-size: 17px; width: 260px; margin: auto; text-align: center;">
+                Being outside, surrounded by
+                the elements bring ease and
+                creative to my mind. Travel
+                enhances the creative views
+                and prospectives one can form
+                of our future.
+
+                Adventure welcomes no ideas,
+                while breaking past fears of
+                the unknown.
+            </p>
+            <img style="width: 80%; margin: auto; padding: 10px;" src="./images/hydroPonics.jpg" alt="Team Work">
+            <p style="font-size: 24px; font-weight: 900; width: 255px; margin: auto; text-align: center;">
+                Energy
+            </p>
+
+            <p style="font-size: 24px; font-weight: 900; width: 255px; margin: auto; text-align: center;">
+                Ecosystem
+            </p>            
+            <p style="font-size: 17px; width: 255px; margin: auto; text-align: center;">
+                A shift in the ecosystem
+                is starting to take place.
+                One&nbsp;day remarkable species
+                of plants will no longer
+                exist. I have a mission,
+                a desire, to prolong the
+                admiration of these
+                gorgeous plants.
+            </p>
+            <p style="font-size: 24px; font-weight: 900; width: 255px; margin: auto; text-align: center;">
+                Philosophy
+            </p>
+            <p style="font-size: 17px; width: 255px; margin: auto; text-align: center;">
+                A shift in the ecosystem
+                is starting to take place.
+                One&nbsp;day remarkable species
+                of plants will no longer
+                exist. I have a mission,
+                a desire, to prolong the
+                admiration of these
+                gorgeous plants.
+            </p>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="d-none" id="Contact">
+        <div class="info-header">
+            <div style="display: flex; width: 100%; height: auto;">
+                <img class="animate contact-header" src="./images/contact.JPG" alt="TheMission">
+            </div>
+            <p style="font-size: 24px; font-weight: 900; width: 255px; margin: auto; text-align: center;">
+                Contact
+            </p>
+            <p style="font-size: 17px; width: 260px; margin: auto; text-align: center;">
+                Feel free to reach out about:
+                Programming Projects
+                Planting Projects
+                Energy Projects
+                Philosophy
+                Just to Chat
+            </p>
+            <!-- insert row of images with socials -->
+            <!-- email -->
+            <!-- github -->
+            <!-- linkedIn -->
+            <!-- CodePen?  -->
+        </div>
+    </div>
+
+    
+
+    <!-- FOLDERS info-->
+
+    <!-- Mission -->
     <div class="d-none" id="Mission">
-    </div>
-    <div class="d-none" id="EvolutionUrbanGrows">
-        <p>Testing TESTTESTSEETSTSETSE</p>
-        <p>Testing TESTTESTSEETSTSETSE</p>
-        <p>Testing TESTTESTSEETSTSETSE</p>
-        <p>Testing TESTTESTSEETSTSETSE</p>
-    </div>
-    <div class="d-none" id="RestoreNativePlants">
-    </div>
-    <div class="d-none" id="MovieQuoteQuiz">
-    </div>
-    <div class="d-none" id="PropellerCommunication">
-    </div>
-    <div class="d-none" id="PlantEnvMonitor">
-    </div>
-    <div class="d-none" id="Github">
+        <div class="info-header">
+            <div style="display: flex; width: 100%; height: auto;">
+                <img class="animate spin-in mission" src="./images/lomLogo.jpg" alt="TheMission">
+            </div>
+            <p style="font-size: 24px; font-weight: 900; width: 255px; margin: auto; text-align: center;">
+                The Mission
+            </p>
+            <p style="font-size: 17px; width: 260px; margin: auto; text-align: center;">
+                Learn and learn and learn
+            </p>
+            <img style="width: 80%; margin: auto; padding: 10px;" src="./images/hydroPonics.jpg" alt="Team Work">
+            <p style="font-size: 24px; font-weight: 900; width: 255px; margin: auto; text-align: center;">
+                Energy
+            </p>
+
+            <p style="font-size: 24px; font-weight: 900; width: 255px; margin: auto; text-align: center;">
+                Ecosystem
+            </p>
+            <p style="font-size: 17px; width: 260px; margin: auto; text-align: center;">
+                We as humans have lost touch
+                with our plant's counterparts.
+                I&nbsp;desire to rekindle the lost
+                connection. Having worked with
+                educated people, native plants,
+                hydroponics, and built automated 
+                irrigation systems, there is a fire 
+                to share this wealth of knowledge
+            </p>        
+            <p style="font-size: 17px; width: 255px; margin: auto; text-align: center;">
+                A shift in the ecosystem
+                is starting to take place.
+                One&nbsp;day remarkable species
+                of plants will no longer
+                exist. I have a mission,
+                a desire, to prolong the
+                admiration of these
+                gorgeous plants.
+            </p>
+            <p style="font-size: 24px; font-weight: 900; width: 255px; margin: auto; text-align: center;">
+                Philosophy
+            </p>
+            <p style="font-size: 17px; width: 255px; margin: auto; text-align: center;">
+                A shift in the ecosystem
+                is starting to take place.
+                One&nbsp;day remarkable species
+                of plants will no longer
+                exist. I have a mission,
+                a desire, to prolong the
+                admiration of these
+                gorgeous plants.
+            </p>
+        </div>
     </div>
 
+    <!-- Evolution Urban Grows -->
+    <div class="d-none" id="EvolutionUrbanGrows">
+        <div class="info-header" >
+            <div style="display: flex; width: 100%; height: auto; background-color: #5d7c3b;">
+                <img class="animate slide-in rnp" src="./images/RNP_Logo.png" alt="RestoreNativePlants">
+            </div>
+            <p style="padding-top: 10px; font-size: 22px; font-weight: 900; width: 255px; margin: auto; text-align: center;">
+                Evolution Urban Grows
+            </p>
+            <p style="font-size: 14px; width: 255px; margin: auto; text-align: center;">
+                Role: Co-Owner, CTO
+            </p>
+            <p style="font-size: 17px; width: 255px; margin: auto; text-align: center;">
+                A team inspired by the environment.
+                FOrming like vultron
+                Figured out more stuff to write fool
+            </p>
+            <img style="width: 80%; margin: auto; padding: 10px;" src="./images/rnpPic1.jpg" alt="Team Work">
+            <p style="font-size: 24px; font-weight: 900; width: 255px; margin: auto; text-align: center;">
+                Native Plants
+            </p>
+            <p style="font-size: 17px; width: 230px; margin: auto; text-align: center;">
+                Location within Ramapo
+                State Forest, the
+                team monitors 200+ acres
+                of land. Together their
+                knowledge of invasive
+                plants, native plants,
+                wildlife and history of
+                the area immerse anyone
+                into wanting to learn more
+            </p>
+            <img style="width: 80%; margin: auto; padding: 10px;" src="./images/rnpPic2.jpg" alt="Team Work">
+            <p style="font-size: 24px; font-weight: 900; width: 255px; margin: auto; text-align: center;">
+                Microgreens
+            </p>
+            <p style="font-size: 17px; width: 265px; margin: auto; text-align: center;">
+                I recommended volunteering
+                time to learn with them.
+                My&nbsp;time with them has 
+                encourage a deep appreciation
+                for the beautiful world of ours
+            </p>
+            <button href="https://www.restorenativeplants.org/"  style="    background-color: #5d7c3b; width: 120px; padding: 5px; margin: auto; margin-top: 10px; border-radius: 20px; align-self: center; outline: none; border: none;">
+                <p style="color: white;">Learn More</p></button>
+            <button href="https://www.restorenativeplants.org/donate/" style="background-color: #0050fd; width: 120px; padding: 5px; margin: auto; margin-top: 10px; border-radius: 20px; align-self: center; outline: none; border: none;">
+                <p style="color: white;">View Code</p></button>
+            <img style="width: 80%; margin: auto; padding: 10px;" src="./images/rnpPic3.jpg" alt="Team Work">
+        </div>
+    </div>
+
+    <!-- Restore Native Plants -->
+    <div class="d-none" id="RestoreNativePlants">
+        <div class="info-header">
+            <div style="width: 100%; height: auto; background-color: #5d7c3b;">
+                <img class="animate slide-in rnp" src="./images/RNP_Logo.png" alt="RestoreNativePlants">
+            </div>
+            <p style="padding-top: 10px; font-size: 17px; width: 255px; margin: auto; text-align: center;">
+                This unqiue non-profit,
+                preserves the environment
+                through a one-of-a-kind
+                connection with
+                Mother&nbsp;Nature herself.
+            </p>
+            <img style="width: 80%; margin: auto; padding: 10px;" src="./images/rnpPic1.jpg" alt="Team Work">
+            <p style="font-size: 17px; width: 230px; margin: auto; text-align: center;">
+                Location within Ramapo
+                State Forest, the
+                team monitors 200+ acres
+                of land. Together their
+                knowledge of invasive
+                plants, native plants,
+                wildlife and history of
+                the area immerse anyone
+                into wanting to learn more
+            </p>
+            <img style="width: 80%; margin: auto; padding: 10px;" src="./images/rnpPic2.jpg" alt="Team Work">
+            <p style="font-size: 17px; width: 265px; margin: auto; text-align: center;">
+                I recommended volunteering
+                time to learn with them.
+                My&nbsp;time with them has 
+                encourage a deep appreciation
+                for the beautiful world of ours
+            </p>
+            <button href="https://www.restorenativeplants.org/"  style="    background-color: #5d7c3b; width: 120px; padding: 5px; margin: auto; margin-top: 10px; border-radius: 20px; align-self: center; outline: none; border: none;">
+                <p style="color: white;">Learn More</p></button>
+            <button href="https://www.restorenativeplants.org/donate/" style="background-color: #3b7c7c; width: 120px; padding: 5px; margin: auto; margin-top: 10px; border-radius: 20px; align-self: center; outline: none; border: none;">
+                <p style="color: white;">Donate</p></button>
+            <img style="width: 80%; margin: auto; padding: 10px;" src="./images/rnpPic3.jpg" alt="Team Work">
+        </div>
+    </div>
+
+    <!-- Movie Quote Quiz -->
+    <div class="d-none" id="MovieQuoteQuiz">
+        <div class="info-body">
+            <img class="mqq" src="./images/mqq2-2.png" alt="RestoreNativePlants">
+            <h1>Movie Quote Quiz</h1>
+            <p style="padding: 10px; font-size: 17px;">
+                This game is meant for film freaks and movie geeks.
+                Play along to test your knowledge of film quotes, both old and new.
+                Contribute your favorite film quotes to add to the fun.<br>
+                <span style="float: right;">3, 2, 1, Action!</span>
+            </p>
+            <p style="text-align:center; font-size: 22px;">Tools:</p>
+            <div class="toolbelt">
+                <div class="tool-row">
+                    <div class="tool">
+                        <img class="tool" src="./images/reactLogo.png">
+                        <span class="tooltip">React</span>
+                    </div>                    <div class="tool">
+                        <img class="tool" src="./images/javascript.png">
+                        <span class="tooltip">React</span>
+                    </div>                    <div class="tool">
+                        <img class="tool" src="./images/mongoLeaf.png">
+                        <span class="tooltip">React</span>
+                    </div>                    <div class="tool">
+                        <img class="tool" src="./images/nodeLogo.png">
+                        <span class="tooltip">React</span>
+                    </div>                    <div class="tool">
+                        <img class="tool" src="./images/illustratorLogo.png">
+                        <span class="tooltip">React</span>
+                    </div>                    <div class="tool">
+                        <img class="tool" src="./images/babelLogo.png">
+                        <span class="tooltip">React</span>
+                    </div>
+<!--                     
+                    <img class="tool" src="./images/javascript.png">
+                    <img class="tool" src="./images/mongoLeaf.png">
+                    <img class="tool" src="./images/nodeLogo.png">
+                    <img class="tool" src="./images/illustratorLogo.png">
+                    <img class="tool" src="./images/babelLogo.png"> -->
+                </div>
+            </div>
+
+            <img style="width: 80%; margin: auto; padding: 10px;" src="./images/rnpPic1.jpg" alt="Team Work">
+            <p style="font-size: 17px; width: 230px; margin: auto; text-align: center;">
+                Location within Ramapo
+                State Forest, the
+                team monitors 200+ acres
+                of land. Together their
+                knowledge of invasive
+                plants, native plants,
+                wildlife and history of
+                the area immerse anyone
+                into wanting to learn more
+            </p>
+            <img style="width: 80%; margin: auto; padding: 10px;" src="./images/rnpPic2.jpg" alt="Team Work">
+            <p style="font-size: 17px; width: 265px; margin: auto; text-align: center;">
+                I recommended volunteering
+                time to learn with them.
+                My&nbsp;time with them has 
+                encourage a deep appreciation
+                for the beautiful world of ours
+            </p>
+            <button href="https://www.restorenativeplants.org/"  style="    background-color: #5d7c3b; width: 120px; padding: 5px; margin: auto; margin-top: 10px; border-radius: 20px; align-self: center; outline: none; border: none;">
+                <p style="color: white;">Learn More</p></button>
+            <button href="https://www.restorenativeplants.org/donate/" style="background-color: #3b7c7c; width: 120px; padding: 5px; margin: auto; margin-top: 10px; border-radius: 20px; align-self: center; outline: none; border: none;">
+                <p style="color: white;">Donate</p></button>
+            <img style="width: 80%; margin: auto; padding: 10px;" src="./images/rnpPic3.jpg" alt="Team Work">
+            </div>
+    </div>
+
+    <!-- Propeller Communication -->
+    <div class="d-none" id="PropellerCommunication">
+        <div class="info-header">
+        <div style="width: 100%; height: auto; display: flex; flex-direction: column;">
+            <img class="animate spin-out-propeller rnp" src="./images/propSpinner.png" alt="RestoreNativePlants">
+            <!-- only one animate at a time -->
+            <img class="animate spin-in prop-logo" src="./images/propLogo.png" alt="RestoreNativePlants">
+        </div>
+
+        <p style="padding-top: 10px; font-size: 17px; width: 255px; margin: auto; text-align: center;">
+            This unqiue non-profit,
+            preserves the environment
+            through a one-of-a-kind
+            connection with
+            Mother&nbsp;Nature herself.
+        </p>
+        <img style="width: 80%; margin: auto; padding: 10px;" src="./images/rnpPic1.jpg" alt="Team Work">
+        <p style="font-size: 17px; width: 230px; margin: auto; text-align: center;">
+            Location within Ramapo
+            State Forest, the
+            team monitors 200+ acres
+            of land. Together their
+            knowledge of invasive
+            plants, native plants,
+            wildlife and history of
+            the area immerse anyone
+            into wanting to learn more
+        </p>
+        <img style="width: 80%; margin: auto; padding: 10px;" src="./images/rnpPic2.jpg" alt="Team Work">
+        <p style="font-size: 17px; width: 265px; margin: auto; text-align: center;">
+            I recommended volunteering
+            time to learn with them.
+            My&nbsp;time with them has 
+            encourage a deep appreciation
+            for the beautiful world of ours
+        </p>
+        <button href="https://www.restorenativeplants.org/"  style="    background-color: #5d7c3b; width: 120px; padding: 5px; margin: auto; margin-top: 10px; border-radius: 20px; align-self: center; outline: none; border: none;">
+            <p style="color: white;">Learn More</p></button>
+        <button href="https://www.restorenativeplants.org/donate/" style="background-color: #3b7c7c; width: 120px; padding: 5px; margin: auto; margin-top: 10px; border-radius: 20px; align-self: center; outline: none; border: none;">
+            <p style="color: white;">Donate</p></button>
+        <img style="width: 80%; margin: auto; padding: 10px;" src="./images/rnpPic3.jpg" alt="Team Work">
+        </div>
+    </div>
+
+    <!-- Plant Environmental Monitor -->
+    <div class="d-none" id="PlantEnvMonitor">
+        <div class="info-header">
+            <div style="width: 100%; height: auto;">
+                <img class="animate slide-in rnp" src="./images/PEM.jpg" alt="RestoreNativePlants">
+            </div>
+            <p style="padding-top: 10px; font-size: 17px; width: 255px; margin: auto; text-align: center;">
+                This unqiue non-profit,
+                preserves the environment
+                through a one-of-a-kind
+                connection with
+                Mother&nbsp;Nature herself.
+            </p>
+            <img style="width: 80%; margin: auto; padding: 10px;" src="./images/rnpPic1.jpg" alt="Team Work">
+            <p style="font-size: 17px; width: 230px; margin: auto; text-align: center;">
+                Location within Ramapo
+                State Forest, the
+                team monitors 200+ acres
+                of land. Together their
+                knowledge of invasive
+                plants, native plants,
+                wildlife and history of
+                the area immerse anyone
+                into wanting to learn more
+            </p>
+            <img style="width: 80%; margin: auto; padding: 10px;" src="./images/rnpPic2.jpg" alt="Team Work">
+            <p style="font-size: 17px; width: 265px; margin: auto; text-align: center;">
+                I recommended volunteering
+                time to learn with them.
+                My&nbsp;time with them has 
+                encourage a deep appreciation
+                for the beautiful world of ours
+            </p>
+            <button href="https://www.restorenativeplants.org/"  style="    background-color: #5d7c3b; width: 120px; padding: 5px; margin: auto; margin-top: 10px; border-radius: 20px; align-self: center; outline: none; border: none;">
+                <p style="color: white;">Learn More</p></button>
+            <button href="https://www.restorenativeplants.org/donate/" style="background-color: #3b7c7c; width: 120px; padding: 5px; margin: auto; margin-top: 10px; border-radius: 20px; align-self: center; outline: none; border: none;">
+                <p style="color: white;">Donate</p></button>
+            <img style="width: 80%; margin: auto; padding: 10px;" src="./images/rnpPic3.jpg" alt="Team Work">
+            </div>
+    </div>
+
+        <!-- Getting Started -->
+    <div class="d-none" id="Getting-Started">
+        <div class="info-header">
+            <div style="width: 100%; height: auto;">
+                <img class="animate slide-in rnp" src="./images/PEM.jpg" alt="RestoreNativePlants">
+            </div>
+            <p style="padding-top: 10px; font-size: 17px; width: 255px; margin: auto; text-align: center;">
+                This unqiue non-profit,
+                preserves the environment
+                through a one-of-a-kind
+                connection with
+                Mother&nbsp;Nature herself.
+            </p>
+            <img style="width: 80%; margin: auto; padding: 10px;" src="./images/rnpPic1.jpg" alt="Team Work">
+            <p style="font-size: 17px; width: 230px; margin: auto; text-align: center;">
+                Location within Ramapo
+                State Forest, the
+                team monitors 200+ acres
+                of land. Together their
+                knowledge of invasive
+                plants, native plants,
+                wildlife and history of
+                the area immerse anyone
+                into wanting to learn more
+            </p>
+            <img style="width: 80%; margin: auto; padding: 10px;" src="./images/rnpPic2.jpg" alt="Team Work">
+            <p style="font-size: 17px; width: 265px; margin: auto; text-align: center;">
+                I recommended volunteering
+                time to learn with them.
+                My&nbsp;time with them has 
+                encourage a deep appreciation
+                for the beautiful world of ours
+            </p>
+            <button href="https://www.restorenativeplants.org/"  style="    background-color: #5d7c3b; width: 120px; padding: 5px; margin: auto; margin-top: 10px; border-radius: 20px; align-self: center; outline: none; border: none;">
+                <p style="color: white;">Learn More</p></button>
+            <button href="https://www.restorenativeplants.org/donate/" style="background-color: #3b7c7c; width: 120px; padding: 5px; margin: auto; margin-top: 10px; border-radius: 20px; align-self: center; outline: none; border: none;">
+                <p style="color: white;">Donate</p></button>
+            <img style="width: 80%; margin: auto; padding: 10px;" src="./images/rnpPic3.jpg" alt="Team Work">
+            </div>
+    </div>
+
+    <!-- JS Imports -->
     <script src="./index.js"></script>
 </body>
 
