@@ -2,27 +2,23 @@ body { height: 100%; width: 100%; overflow: hidden; }
 
 #container { position: absolute; top: 0; bottom: 0; left: 0; right: 0; overflow: auto; }
 
-h1, h2, p { font-family: 'Comfortaa', cursive; font-size: 36px; font-weight: 400; line-height: 30px; margin: 0; }
+p { font-family: 'Montserrat', sans-serif; font-size: 17px; margin: 0; color: #2c1D12; }
 
-h2, p { padding: 0px; font-family: 'Comfortaa', cursive; font-size: 22px; font-weight: 700; line-height: 20px; }
-
-p { font-family: 'Lato', sans-serif; font-weight: 400; font-size: 18px; }
+h1 { font-family: 'Montserrat', sans-serif; letter-spacing: -.10rem; margin: 0; line-height: 29px; padding-left: 15px; color: #2c1D12; }
 
 .d-none { display: none; }
+
+.home { background-image: url(../images/miragePersonal.png); background-size: cover; height: 100%; width: 100%; }
 
 .button { margin-left: auto; margin-bottom: 15px; margin-top: 10px; width: 200px; padding-top: 10px; padding-bottom: 10px; border-radius: 50px 0 0 50px; box-shadow: 0 2px 5px; text-align: center; }
 
 .button-primary { background-color: #93b7be; color: #42646b; }
 
-.button-copy { font-size: 22px; }
+.button-copy { font-family: 'Lato', sans-serif; font-size: 22px; }
 
-.body-title { padding-left: 15px; }
+.body-copy { font-family: 'Lato', sans-serif; font-size: 18px; line-height: 20px; padding-top: 10px; padding-left: 15px; padding-right: 20px; padding-bottom: 10px; max-width: 350px; }
 
-.body-subtitle { padding-left: 15px; padding-top: 15px; }
-
-.body-copy { line-height: 20px; padding-top: 10px; padding-left: 15px; padding-right: 20px; padding-bottom: 10px; max-width: 350px; }
-
-.status-bar { font-family: 'Lato', sans-serif; align-self: center; margin: auto; width: 200px; border-radius: 25px; border: solid 2px #000; text-align: center; box-shadow: 0 3px 5px -2px #000; font-size: 20px; line-height: 35px; color: white; text-shadow: 0 0 5px #000; background-color: #7fb069; }
+.status-bar { font-family: 'Lato', sans-serif; align-self: center; margin-bottom: 20px; width: 250px; border-radius: 25px; border: solid 2px #000; text-align: center; box-shadow: 0 3px 5px -2px #000; font-size: 20px; line-height: 35px; color: white; text-shadow: 0 0 5px #000; background-color: #7fb069; }
 
 .preloader { pointer-events: none; z-index: 100; position: absolute; top: 0; bottom: 0; left: 0; right: 0; height: 100%; width: 100%; overflow: hidden; }
 
@@ -56,25 +52,17 @@ p { font-family: 'Lato', sans-serif; font-weight: 400; font-size: 18px; }
 
 .preloader-text.on { display: none; }
 
-.home { background-image: url(../images/miragePersonal.png); background-size: cover; height: 100%; width: 100%; }
-
 .icon-lobby { position: absolute; bottom: 50px; right: 0; flex-direction: column; display: flex; align-items: flex-end; }
 
-.desk-icon { padding-left: 3px; padding-right: 3px; width: 104px; }
+.desk-icon { width: 100px; }
 
 .folder-icon { margin: auto; background-image: url(../images/folder.jpg); background-size: contain; background-repeat: no-repeat; height: 65px; width: 70px; }
 
-.icon-text { font-size: 17px; line-height: 19px; letter-spacing: -0.03em; overflow-wrap: break-word; text-align: center; text-shadow: 0px 0px 1px 5px #fff; padding: 0; }
+.icon-text { font-size: 17px; line-height: 19px; letter-spacing: -0.03em; overflow-wrap: break-word; text-align: center; text-shadow: 0px 0px 1px 5px #fff; }
 
 .getting-started-icon { margin: auto; background-image: url(../images/manual.png); background-size: contain; background-repeat: no-repeat; height: 55px; width: 70px; }
 
 .red-close { position: absolute; bottom: -37px; right: 5px; background-color: red; border: 1px solid grey; border-radius: 10px; width: 50px; height: 30px; }
-
-.close-x-left, .close-x-right, .close-x-middle { width: 5px; height: 30px; border-radius: 20px; transform: translate(-50%, -50%) rotate(45deg); position: absolute; border: 1px solid #2c1D12; background-color: #2c1D12; left: 50%; top: 50%; }
-
-.close-x-right { transform: translate(-50%, -50%) rotate(-45deg); }
-
-.close-x-middle { border: none; border-radius: 0; box-shadow: 0 0 5px 1px #2c1d12; background-color: #2c1D12; height: 8px; width: 8px; }
 
 .window-title { pointer-events: none; position: absolute; bottom: -35px; font-size: 24px; text-align: center; width: 100%; }
 
@@ -140,9 +128,9 @@ p { font-family: 'Lato', sans-serif; font-weight: 400; font-size: 18px; }
   100% { transform: scale(1);
     opacity: 0; } }
 
-.menu { position: absolute; z-index: 10; bottom: 0; background-color: #EDE2DE; box-shadow: 0 0 5px; width: 100vw; height: 40px; }
+.menu { position: absolute; z-index: 10; bottom: 0vh; background-color: #EDE2DE; box-shadow: 0 0 5px; width: 100vw; height: 40px; }
 
-.menu-btn { position: absolute; text-align: center; line-height: 36px; font-size: 25px; width: 100px; height: 36px; border: solid 2px #2c1D12; color: #2c1D12; padding: 0; }
+.menu-btn { position: absolute; text-align: center; line-height: 36px; font-size: 25px; width: 25%; height: 36px; border: solid 2px #2c1D12; color: #2c1D12; }
 
 .open-menu { border: 2px solid; border-bottom: none; background-color: white; position: absolute; bottom: 40px; height: calc(100vh - 30px); max-height: 400px; width: calc(100vw - 4px); }
 
@@ -150,7 +138,7 @@ p { font-family: 'Lato', sans-serif; font-weight: 400; font-size: 18px; }
 
 .menu-row.on { background-color: white; box-shadow: inset 0px 0px 5px #000; }
 
-.menu-text { font-weight: 400; font-size: 22px; letter-spacing: -0.05em; padding: 0; padding-left: 20px; position: relative; top: 50%; transform: translateY(-50%); }
+.menu-text { font-weight: 400; font-size: 22px; letter-spacing: -0.05em; padding-left: 5%; position: relative; top: 50%; transform: translateY(-50%); }
 
 .menu-text.on { font-size: 19px; }
 

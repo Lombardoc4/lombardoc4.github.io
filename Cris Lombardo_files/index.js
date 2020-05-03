@@ -1,7 +1,7 @@
 const conf = {
 
     // expand art a lot 
-    graphics: ['dalia.jpg', 'heart.jpeg', 'illuminat.jpeg', 'lomLogo.jpg', 'mirage.jpg', 'scrub.jpeg', 'x1.jpg', 'x4.jpg', 'x9.jpg', 'x16.jpg'],
+    art: ['dalia.jpg', 'heart.jpeg', 'illuminat.jpeg', 'lomLogo.jpg', 'mirage.jpg', 'scrub.jpeg', 'x1.jpg', 'x4.jpg', 'x9.jpg', 'x16.jpg'],
     nature: ['EvolutionUrbanGrows.info', 'RestoreNativePlants.info', 'ThePlantGroup.info'], //Future : ThePlantGroup.info, HarlemGrown.info
     code: ['EvolutionUrbanGrows.info','MovieQuoteQuiz.info', 'PropellerCommunication.info', 'PlantEnvMonitor.info' ], // Future: ChaseGame.info
     menu: ['Words of Wisdom', 'Tag - Game', 'Adventures', 'Do Our Part', 'Restart?'],
@@ -36,7 +36,7 @@ function screencontrol(type, title){
 // Creating Menu
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 function createMenuRowText(content){
-    let menuRowText = document.createElement('h2');
+    let menuRowText = document.createElement('p');
     menuRowText.classList.add('menu-text');
     menuRowText.appendChild(document.createTextNode(content));
 
@@ -164,11 +164,11 @@ function createMenuRowAction(el){
     // To animate images a little
     menuRowAction.addEventListener("mouseenter", function() {
         this.classList.add('on');
-        this.getElementsByTagName('h2')[0].classList.add('on');
+        this.getElementsByTagName('p')[0].classList.add('on');
     });
     menuRowAction.addEventListener("mouseleave", function() {
         this.classList.remove('on');
-        this.getElementsByTagName('h2')[0].classList.remove('on');
+        this.getElementsByTagName('p')[0].classList.remove('on');
     });
 
     // Scroll Actions
@@ -233,7 +233,7 @@ function toggleMenu() {
 
 function createFolderRowTitle(content){
     // row text
-    let rowTitle = document.createElement('h2');
+    let rowTitle = document.createElement('p');
     // if (content.length > 10){
     //     let content1 = content.slice(0, 12);
     //     let content2 = content.slice(-8);
@@ -246,7 +246,7 @@ function createFolderRowTitle(content){
     rowTitle.style.alignSelf=  'center';
     rowTitle.style.fontSize = "20px";
     // rowTitle.style.fontSize = "24px";
-    rowTitle.style.paddingLeft = "15px";
+    rowTitle.style.paddingLeft = "5px";
     rowTitle.appendChild(rowTitleText);
 
     return rowTitle;
@@ -286,7 +286,7 @@ function folderBody(title) {
 }
 
 function createWindowTitle(title) {
-    let windowTitle = document.createElement('h2')
+    let windowTitle = document.createElement('p')
     windowTitle.classList.add('window-title')
     let modTitle = title;
     if (modTitle.length > 10){
@@ -304,17 +304,6 @@ function closeButton(type){
     closeBtn.addEventListener('click', function() { 
         closeWindow(this, type);
     }, false);
-
-    // X on button
-    let xleft = document.createElement('div');
-    xleft.classList.add('close-x-left');
-    let xright = document.createElement('div');
-    xright.classList.add('close-x-right');
-    let middle = document.createElement('div');
-    middle.classList.add('close-x-middle');
-    closeBtn.appendChild(middle);
-    closeBtn.appendChild(xleft);
-    closeBtn.appendChild(xright);
 
     return closeBtn;
 }
@@ -399,7 +388,7 @@ function openWindow(type, title) {
 
 // figure out icon type
 function getIconInfo(item) {
-    let itemName = item.getElementsByTagName('h2')[0].innerHTML;
+    let itemName = item.getElementsByTagName('p')[0].innerHTML;
     let extension = itemName.indexOf('.');
     if (extension >= 0){
         openWindow('file', itemName);
@@ -418,7 +407,7 @@ function closeWindow(el, type) {
     if (type === "folder"){
         foldersOpen--;
     }
-    let elTitle = el.parentElement.getElementsByTagName('h2')[0].innerHTML;
+    let elTitle = el.parentElement.getElementsByTagName('p')[0].innerHTML;
     let elTitleLocation = windowsThatAreOpen.indexOf(elTitle);
     windowsThatAreOpen.splice(elTitleLocation, 1);
     el.parentElement.remove()
