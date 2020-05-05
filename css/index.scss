@@ -28,13 +28,13 @@ h1, h2, p {
 h2, p {
     padding: 0px;
     font-family: 'Comfortaa', cursive;
-    font-size: 22px; 
+    font-size: 22px;
     font-weight: 700;
     line-height: 20px;
 }
 
 
-p {  
+p {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -44,8 +44,6 @@ p {
 .d-none{
     display: none;
 }
-
-
 
 .button{
     margin-left: auto;
@@ -62,7 +60,7 @@ p {
 .button-primary{
     background-color: #93b7be;
     color: #42646b;
-    
+
 }
 
 
@@ -263,7 +261,7 @@ p {
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~
-// A Window 
+// A Window
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~
 .red-close{
     position: absolute;
@@ -547,7 +545,7 @@ p {
 }
 .menu-row{
     height: 20%;
-    border-bottom: 1px solid #000; 
+    border-bottom: 1px solid #000;
     background-color: white;
     &.on {
         background-color: white;
@@ -724,4 +722,34 @@ p {
     50% {
         background-position: 0% 65%;
     }
+}
+
+
+@media only screen and (min-width: 600px) {
+
+    .folder-content{
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .open-file, .open-info, .open-folder{
+        max-width: 600px;
+    }
+
+    .open-folder{
+        bottom: 50%;
+        transform: translate(-50%, 50%);
+    }
+
+    .open-file {
+        height: 60vh;
+    }
+
+    .body-copy{
+        max-width: 600px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+
 }
