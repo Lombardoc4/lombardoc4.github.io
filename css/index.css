@@ -110,7 +110,7 @@ p { font-family: 'Lato', sans-serif; font-weight: 400; font-size: 18px; }
 
 .rnp { width: 80%; margin: auto; padding: 20px; }
 
-.mission { width: 50%; margin: auto; padding: 10px; }
+.mission { width: 50%; margin: auto; }
 
 .prop-logo { width: 60%; padding: 20px; padding-top: 110px; padding-bottom: 90px; margin: auto; transform: scale(0); }
 
@@ -191,10 +191,6 @@ p { font-family: 'Lato', sans-serif; font-weight: 400; font-size: 18px; }
 
 .restart { background-image: url(../images/restart.jpg); background-size: 100%; background-position: 35%; }
 
-.contact { background-color: #fff; background-image: url(../images/lomLogo.jpg); background-size: 50%; background-repeat: no-repeat; background-position: 100% 50%; }
-
-.contact.on { animation: contact 10s infinite; }
-
 .contact-header { /* width: 70%; */ /* margin: auto; */ height: 200px; border-radius: 50%; margin-top: 15px; margin-bottom: 15px; box-shadow: 0 0 10px; }
 
 .adventure { background-image: url("../images/adventure.jpg"); background-position: 20% 55%; background-size: 120%; }
@@ -218,4 +214,8 @@ p { font-family: 'Lato', sans-serif; font-weight: 400; font-size: 18px; }
   .open-file, .open-info, .open-folder { max-width: 600px; }
   .open-folder { bottom: 50%; transform: translate(-50%, 50%); }
   .open-file { height: 60vh; }
-  .body-copy { max-width: 600px; padding-bottom: 20px; padding-top: 20px; } }
+  .body-copy { align-self: center; max-width: 450px; padding-bottom: 20px; padding-top: 20px; }
+  .body-title, .body-subtitle { align-self: center; }
+  #Contact, .Contact { max-width: 300px; }
+  #Contact .body-title, #Contact .body-subtitle, #Contact .body-copy, .Contact .body-title, .Contact .body-subtitle, .Contact .body-copy { align-self: baseline; }
+  .open-menu { width: 40vw; } }

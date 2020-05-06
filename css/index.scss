@@ -453,7 +453,7 @@ p {
 .mission{
     width: 50%;
     margin: auto;
-    padding: 10px;
+    // padding: 10px;
 }
 .prop-logo{
     width: 60%;
@@ -661,16 +661,7 @@ p {
     background-position: 35%;
 }
 
-.contact{
-    background-color: #fff;
-    background-image: url(../images/lomLogo.jpg);
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: 100% 50%;
-    &.on {
-        animation: contact 10s infinite;
-    }
-}
+
 .contact-header{
     /* width: 70%; */
     /* margin: auto; */
@@ -746,10 +737,25 @@ p {
     }
 
     .body-copy{
-        max-width: 600px;
+        align-self: center;
+        max-width: 450px;
         padding-bottom: 20px;
         padding-top: 20px;
     }
 
+    .body-title, .body-subtitle {
+        align-self: center;
+    }
+
+    #Contact, .Contact {
+        .body-title, .body-subtitle, .body-copy {
+            align-self: baseline;
+        }
+        max-width: 300px;
+    }
+
+    .open-menu{
+        width: 40vw;
+    }
 
 }

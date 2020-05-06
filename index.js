@@ -322,8 +322,8 @@ function createInfoWindow(title) {
     let divReveal = title.slice(0, fileExtensionIndex);
     divReveal = document.getElementById(divReveal).cloneNode(true);
 
-    divReveal.setAttribute('onmousedown', 'console.log("test")');
-    divReveal.setAttribute('onmouseup', 'console.log("test2")');
+    divReveal.setAttribute('onmousedown', 'mydragg.startMoving(this, "container", event)');
+    divReveal.setAttribute('onmouseup', 'mydragg.stopMoving("container")');
 
     if (divReveal.classList.contains('d-none'))
         divReveal.classList.remove('d-none');
@@ -331,6 +331,7 @@ function createInfoWindow(title) {
     // upgrade this to be for every animate class
     divReveal.setAttribute('id', title);
     divReveal.classList.add('open-info');
+    divReveal.classList.add(title.slice(0, fileExtensionIndex));
     divReveal.style.backgroundColor = '#fff';
 
     const closeBtn = closeButton('info');
@@ -483,8 +484,16 @@ window.onload = (e) => {
 // what is happening????
 // investigate further
 // limit so cannot go out of window  or over menu bar --- hiding overflow right now
-var mydragg = (function () {
+const mydragg = (function () {
+    // return console.log('testing for real');
     return {
+
+        stopMoving(container) {
+            console.log('stop');
+            // var a = document.createElement('script');
+            document.getElementById(container).style.cursor = 'default';
+            document.onmousemove = function () {};
+        },
         move(el, xpos, ypos) {
             el.style.left = `${xpos}px`;
             el.style.top = `${ypos}px`;
@@ -506,16 +515,16 @@ var mydragg = (function () {
                 let divLeft = el.style.left;
 
 
-                const eWi = parseInt(el.style.width);
+                const eWi = parseInt(el.offsetWidth);
+
+                const eHe = parseInt(el.offsetHeight);
 
 
-                const eHe = parseInt(el.style.height);
+                const cWi = parseInt(document.getElementById(container).offsetWidth);
+                console.log(cWi);
 
+                const cHe = parseInt(document.getElementById(container).offsetHeight);
 
-                const cWi = parseInt(document.getElementById(container).style.width);
-
-
-                const cHe = parseInt(document.getElementById(container).style.height);
                 document.getElementById(container).style.cursor = 'move';
                 divTop = divTop.replace('px', '');
                 divLeft = divLeft.replace('px', '');
@@ -534,25 +543,27 @@ var mydragg = (function () {
                     aX = posX - diffX,
                     aY = posY - diffY;
 
+
                     // if (aX < 0)
                     //     aX = 0;
                     // if (aY < 0)
                     //     aY = 0;
-                    if (aX + eWi > cWi)
+                    if (aX + eWi < cWi){
+
+
                         aX = cWi - eWi;
-                    if (aY + eHe > cHe)
+                    }
+                    if (aY + eHe < cHe)
                         aY = cHe - eHe;
-                        console.log(aX);
+
+                    console.log(aX);
+                    console.log(eWi);
+                    console.log(cWi);
 
                     mydragg.move(el, aX, aY);
                 };
             }
         },
-        stopMoving(container) {
-            console.log('stop');
-            // var a = document.createElement('script');
-            document.getElementById(container).style.cursor = 'default';
-            document.onmousemove = function () {};
-        },
+
     };
 }());
