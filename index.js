@@ -244,7 +244,7 @@ function createFolderRowTitle(content) {
     rowTitle.style.alignSelf =  'center';
     rowTitle.style.fontSize = '20px';
     // rowTitle.style.fontSize = "24px";
-    rowTitle.style.paddingLeft = '15px';
+    rowTitle.style.paddingLeft = '10px';
     rowTitle.appendChild(rowTitleText);
 
     return rowTitle;
@@ -278,20 +278,32 @@ function folderBody(title) {
     }
 
     const folder = document.getElementsByClassName('open-folder')[foldersOpen - 1];
-    folder.appendChild(folderBody);
+    console.log('folder', folder);
+    const firstNode = folder.firstChild;
+    folder.insertBefore(folderBody, firstNode);
+    folder.appendChild(createWindowTitle(title));
+
 }
 
 function createWindowTitle(title) {
-    const windowTitle = document.createElement('h2');
-    windowTitle.classList.add('window-title');
+
+    const windowDiv = document.createElement('div');
+    windowDiv.classList.add('window-title');
+
     let modTitle = title;
     if (modTitle.length > 10) {
         modTitle = title.slice(0, 9);
         modTitle += '...';
     }
+    const windowTitle = document.createElement('h2');
     windowTitle.appendChild(document.createTextNode(modTitle));
+    windowDiv.appendChild(windowTitle);
 
-    return windowTitle;
+
+    windowDiv.setAttribute('onmousedown', 'mydragg.startMoving(this.parentNode, "container", event)');
+    windowDiv.setAttribute('onmouseup', 'mydragg.stopMoving("container")');
+
+    return windowDiv;
 }
 
 function closeButton(type) {
@@ -322,7 +334,7 @@ function createInfoWindow(title) {
     let divReveal = title.slice(0, fileExtensionIndex);
     divReveal = document.getElementById(divReveal).cloneNode(true);
 
-    divReveal.setAttribute('onmousedown', 'mydragg.startMoving(this, "container", event)');
+    // divReveal.setAttribute('onmousedown', 'mydragg.startMoving(this, "container", event)');
     divReveal.setAttribute('onmouseup', 'mydragg.stopMoving("container")');
 
     if (divReveal.classList.contains('d-none'))
@@ -336,13 +348,12 @@ function createInfoWindow(title) {
 
     const closeBtn = closeButton('info');
     divReveal.appendChild(closeBtn);
-    console.log(divReveal);
 
-    const windowTitle = createWindowTitle(title);
     const windowShadow = document.createElement('div');
     windowShadow.classList.add('window-shadow');
     divReveal.appendChild(windowShadow);
-    divReveal.appendChild(windowTitle);
+
+    divReveal.appendChild(createWindowTitle(title));
 
     document.body.appendChild(divReveal);
 
@@ -388,15 +399,17 @@ function openWindow(type, title) {
         newWindow.classList.add('open-folder');
     }
 
-    newWindow.setAttribute('onmousedown', 'console.log("test")');
-    newWindow.setAttribute('onmouseup', 'console.log("test2")');
-
-    newWindow.appendChild(createWindowTitle(title));
-    newWindow.appendChild(closeButton(type));
 
     const windowShadow = document.createElement('div');
     windowShadow.classList.add('window-shadow');
     newWindow.appendChild(windowShadow);
+
+    newWindow.setAttribute('onmousedown', 'console.log("test")');
+    newWindow.setAttribute('onmouseup', 'console.log("test2")');
+
+    // newWindow.appendChild(createWindowTitle(title));
+    newWindow.appendChild(closeButton(type));
+
     document.body.appendChild(newWindow);
 }
 
@@ -484,6 +497,7 @@ window.onload = (e) => {
 // what is happening????
 // investigate further
 // limit so cannot go out of window  or over menu bar --- hiding overflow right now
+// eslint-disable-next-line func-names
 const mydragg = (function () {
     // return console.log('testing for real');
     return {
@@ -495,70 +509,64 @@ const mydragg = (function () {
             document.onmousemove = function () {};
         },
         move(el, xpos, ypos) {
+            console.log('positoning', [xpos, ypos]);
             el.style.left = `${xpos}px`;
             el.style.top = `${ypos}px`;
         },
         startMoving(el, container, evt) {
 
+            console.log(el);
             if (evt.offsetY > 0) {
 
-                evt = window.event;
-                const posX = evt.clientX;
-
-
-                const posY = evt.clientY;
-
-
-                let divTop = el.style.top;
-
-
-                let divLeft = el.style.left;
-
+                const OGposX = evt.clientX;
+                const OGposY = evt.clientY;
 
                 const eWi = parseInt(el.offsetWidth);
 
                 const eHe = parseInt(el.offsetHeight);
 
+                let divTop = el.offsetTop;
+                let divLeft = el.offsetLeft ;
 
                 const cWi = parseInt(document.getElementById(container).offsetWidth);
-                console.log(cWi);
 
-                const cHe = parseInt(document.getElementById(container).offsetHeight);
+                const cHe = parseInt(document.getElementById(container).offsetHeight) - 40;
+
 
                 document.getElementById(container).style.cursor = 'move';
-                divTop = divTop.replace('px', '');
-                divLeft = divLeft.replace('px', '');
-                const diffX = posX - divLeft;
+
+                const divRight = cWi - (divLeft + eWi);
+                const  divBottom = cHe - (divTop + eHe);
+
+                const differX = OGposX - divLeft;
+                const differY = OGposY - divTop;
 
 
-                const diffY = posY - divTop;
-
+                // eslint-disable-next-line func-names
                 document.onmousemove = function (evt) {
                     evt = evt || window.event;
 
                     const posX = evt.clientX;
-
-
                     const posY = evt.clientY;
-                    aX = posX - diffX,
-                    aY = posY - diffY;
 
+                    let aX = posX - differX;
+                    let aY = posY - differY;
 
-                    // if (aX < 0)
-                    //     aX = 0;
-                    // if (aY < 0)
-                    //     aY = 0;
-                    if (aX + eWi < cWi){
+                    if (OGposX - posX >= divLeft - (eWi / 2))
+                        aX = eWi / 2;
 
+                    if (OGposY - posY >= divTop)
+                        aY = 0;
 
-                        aX = cWi - eWi;
-                    }
-                    if (aY + eHe < cHe)
+                    if (posX - OGposX >= divRight + (eWi / 2))
+                        aX = cWi - eWi / 2;
+
+                    if (posY - OGposY >= divBottom)
                         aY = cHe - eHe;
 
-                    console.log(aX);
-                    console.log(eWi);
-                    console.log(cWi);
+
+                    console.log('final values', [aX, aY]);
+
 
                     mydragg.move(el, aX, aY);
                 };
