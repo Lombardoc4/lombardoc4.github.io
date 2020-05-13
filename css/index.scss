@@ -35,7 +35,7 @@ h2, p {
 
 
 p {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 18px;
     // line-height: 18px;
@@ -89,7 +89,7 @@ p {
 }
 
 .status-bar{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     align-self: center;
     margin: auto;
     width: 200px;
@@ -325,7 +325,7 @@ p {
 // ~~~~~~~~~~~~~~~~~~~~~~~~
 .open-folder{
     bottom: 10%;
-    height: 35%;
+    height: 37%;
     // background-color: #fff;
     // max-height: 400px;
     // display: flex;
@@ -360,7 +360,7 @@ p {
 }
 
 .open-file{
-    top: 50%;
+    top: 20%;
     // transform: translate(-50%, -50%);
     height: 90vw;
     background-color: white;
@@ -458,7 +458,7 @@ p {
     padding: 20px;
 }
 .mission{
-    width: 50%;
+    width: calc(100vw - 5px);;
     margin: auto;
     // padding: 10px;
 }
@@ -751,6 +751,12 @@ p {
         max-width: 450px;
         padding-bottom: 20px;
         padding-top: 20px;
+        font-size: 24px;
+        line-height: 1;
+    }
+
+    p{
+        font-weight: 200;
     }
 
     .body-title, .body-subtitle {
@@ -766,6 +772,18 @@ p {
 
     .open-menu{
         width: 40vw;
+    }
+
+    .button{
+        width: 300px
+    }
+
+    .tool-row{
+        height: 50px;
+    }
+
+    .mission{
+        width: 50%;
     }
 
 }

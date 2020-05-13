@@ -2,9 +2,19 @@ const conf = {
 
     // expand art a lot
     graphics: ['dalia.jpg', 'heart.jpeg', 'illuminat.jpeg', 'lomLogo.jpg', 'mirage.jpg', 'scrub.jpeg', 'x1.jpg', 'x4.jpg', 'x9.jpg', 'x16.jpg'],
-    nature:   ['EvolutionUrbanGrows.info', 'RestoreNativePlants.info', 'ThePlantGroup.info'], // Future : ThePlantGroup.info, HarlemGrown.info
-    code:     ['EvolutionUrbanGrows.info', 'MovieQuoteQuiz.info', 'PropellerCommunication.info', 'PlantEnvMonitor.info'], // Future: ChaseGame.info
-    menu:     [
+    nature:   [
+        // 'EvolutionUrbanGrows.info',
+        // 'RestoreNativePlants.info',
+        // 'ThePlantGroup.info'
+    ], // Future : ThePlantGroup.info, HarlemGrown.info
+
+    code: [
+        // 'EvolutionUrbanGrows.info',
+        'MovieQuoteQuiz.info',
+        // 'PropellerCommunication.info',
+        'PlantEnvMonitor.info',
+    ], // Future: ChaseGame.info
+    menu: [
         'Words of Wisdom',
         // 'Tag - Game',
         // 'Adventures',
@@ -12,7 +22,18 @@ const conf = {
         // 'Toolbelt',
         'Restart?',
     ],
-    widsom:   ['test1', 'test2', 'test3', 'test4', 'test5', 'test6', 'test7', 'test8', 'test9', 'test0'],
+    widsom: [
+        'test1',
+        'test2',
+        'test3',
+        'test4',
+        'test5',
+        'test6',
+        'test7',
+        'test8',
+        'test9',
+        'test0',
+    ],
 };
 
 
