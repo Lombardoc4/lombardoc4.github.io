@@ -361,7 +361,7 @@ p {
 
 .open-file{
     top: 50%;
-    transform: translate(-50%, -50%);
+    // transform: translate(-50%, -50%);
     height: 90vw;
     background-color: white;
     background-size: contain;
@@ -378,7 +378,7 @@ p {
     bottom: 10%;
 }
 
-.info-body, .folder-body{
+.info-body, .folder-body, .image-spacer{
     border: solid 1px grey;
     // text-align: center;
     border-radius: 5px;
@@ -398,6 +398,10 @@ p {
 .folder-body {
     display: block;
     background-color: white;
+}
+
+.image-spacer{
+    opacity: 0;
 }
 
 .toolbelt{
@@ -547,7 +551,7 @@ p {
     width: calc(100vw - 4px);
 }
 .menu-row{
-    height: 20%;
+    // height: 20%;
     border-bottom: 1px solid #000;
     background-color: white;
     &.on {
@@ -659,9 +663,9 @@ p {
 }
 
 .restart{
-    background-image: url(../images/restart.jpg);
-    background-size: 100%;
-    background-position: 35%;
+    background-image: url(../images/loading.png);
+    background-size: 80%;
+    background-position: 45%;
 }
 
 
@@ -738,6 +742,7 @@ p {
     }
 
     .open-file {
+        top: 15%;
         height: 60vh;
     }
 

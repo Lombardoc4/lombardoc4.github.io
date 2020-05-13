@@ -4,7 +4,14 @@ const conf = {
     graphics: ['dalia.jpg', 'heart.jpeg', 'illuminat.jpeg', 'lomLogo.jpg', 'mirage.jpg', 'scrub.jpeg', 'x1.jpg', 'x4.jpg', 'x9.jpg', 'x16.jpg'],
     nature:   ['EvolutionUrbanGrows.info', 'RestoreNativePlants.info', 'ThePlantGroup.info'], // Future : ThePlantGroup.info, HarlemGrown.info
     code:     ['EvolutionUrbanGrows.info', 'MovieQuoteQuiz.info', 'PropellerCommunication.info', 'PlantEnvMonitor.info'], // Future: ChaseGame.info
-    menu:     ['Words of Wisdom', 'Tag - Game', 'Adventures', 'Do Our Part', 'Restart?'],
+    menu:     [
+        'Words of Wisdom',
+        // 'Tag - Game',
+        // 'Adventures',
+        // 'Do Our Part',
+        // 'Toolbelt',
+        'Restart?',
+    ],
     widsom:   ['test1', 'test2', 'test3', 'test4', 'test5', 'test6', 'test7', 'test8', 'test9', 'test0'],
 };
 
@@ -217,6 +224,7 @@ function toggleMenu() {
 
         for (const content of conf.menu) {
             const menuRow = createMenuRow(content);
+            menuRow.style.height = (100 / conf.menu.length  + '%')
             menu.appendChild(menuRow);
         }
 
@@ -334,7 +342,6 @@ function createInfoWindow(title) {
     let divReveal = title.slice(0, fileExtensionIndex);
     divReveal = document.getElementById(divReveal).cloneNode(true);
 
-    // divReveal.setAttribute('onmousedown', 'mydragg.startMoving(this, "container", event)');
     divReveal.setAttribute('onmouseup', 'mydragg.stopMoving("container")');
 
     if (divReveal.classList.contains('d-none'))
@@ -372,17 +379,9 @@ function openWindow(type, title) {
     const newWindow = document.createElement('div');
     newWindow.setAttribute('id', title);
 
-    // Allow Windows to be movable ( desktop )'
-    // newWindow.setAttribute('onmousedown', 'mydragg.startMoving(this, "container", event);');
-
-
-    console.log(newWindow);
     // file vs folder sorting
-
     if (type === 'file') {
         filesOpen++;
-        newWindow.classList.add('open-file');
-        newWindow.style.backgroundImage = `url('./images/${title}')`;
 
         // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         // Info Files
@@ -392,6 +391,13 @@ function openWindow(type, title) {
             createInfoWindow(title);
             return;
         }
+
+        newWindow.classList.add('open-file');
+        newWindow.style.backgroundImage = `url('./images/${title}')`;
+        const spacerDiv = document.createElement('div');
+        spacerDiv.classList.add('image-spacer');
+        newWindow.appendChild(spacerDiv);
+        newWindow.appendChild(createWindowTitle(title));
     }
 
     if (type === 'folder') {
@@ -403,9 +409,8 @@ function openWindow(type, title) {
     const windowShadow = document.createElement('div');
     windowShadow.classList.add('window-shadow');
     newWindow.appendChild(windowShadow);
+    newWindow.setAttribute('onmouseup', 'mydragg.stopMoving("container")');
 
-    newWindow.setAttribute('onmousedown', 'console.log("test")');
-    newWindow.setAttribute('onmouseup', 'console.log("test2")');
 
     // newWindow.appendChild(createWindowTitle(title));
     newWindow.appendChild(closeButton(type));
