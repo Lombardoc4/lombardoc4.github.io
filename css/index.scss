@@ -46,20 +46,20 @@ p {
 }
 
 .button{
-    margin-left: auto;
+    margin: auto;
     margin-bottom: 15px;
     margin-top: 10px;
     width: 200px;
     padding-top: 10px;
     padding-bottom: 10px;
-    border-radius: 50px 0 0 50px;
-    box-shadow: 0 2px 5px;
+    border-radius: 50px;
+    box-shadow: 0 2px 5px #000;
     text-align: center;
+    color: #ffffff;
 }
 
 .button-primary{
-    background-color: #93b7be;
-    color: #42646b;
+    background-color: #f8c682;
 
 }
 
@@ -81,7 +81,7 @@ p {
 
 .body-copy{
     line-height: 20px;
-    padding-top: 10px;
+    padding-top: 20px;
     padding-left: 15px;
     padding-right: 20px;
     padding-bottom: 10px;
@@ -92,9 +92,10 @@ p {
     font-family: 'Montserrat', sans-serif;
     align-self: center;
     margin: auto;
+    margin-bottom: 35px;
     width: 200px;
     border-radius: 25px;
-    border: solid 2px #000;
+    // border: solid 2px #000;
     text-align: center;
     box-shadow: 0 3px 5px -2px #000;
     font-size: 20px;

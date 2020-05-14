@@ -10,9 +10,9 @@ p { font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 18px; }
 
 .d-none { display: none; }
 
-.button { margin-left: auto; margin-bottom: 15px; margin-top: 10px; width: 200px; padding-top: 10px; padding-bottom: 10px; border-radius: 50px 0 0 50px; box-shadow: 0 2px 5px; text-align: center; }
+.button { margin: auto; margin-bottom: 15px; margin-top: 10px; width: 200px; padding-top: 10px; padding-bottom: 10px; border-radius: 50px; box-shadow: 0 2px 5px #000; text-align: center; color: #ffffff; }
 
-.button-primary { background-color: #93b7be; color: #42646b; }
+.button-primary { background-color: #f8c682; }
 
 .button-copy { font-size: 22px; }
 
@@ -20,9 +20,9 @@ p { font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 18px; }
 
 .body-subtitle { padding-left: 15px; padding-top: 15px; }
 
-.body-copy { line-height: 20px; padding-top: 10px; padding-left: 15px; padding-right: 20px; padding-bottom: 10px; max-width: 350px; }
+.body-copy { line-height: 20px; padding-top: 20px; padding-left: 15px; padding-right: 20px; padding-bottom: 10px; max-width: 350px; }
 
-.status-bar { font-family: 'Montserrat', sans-serif; align-self: center; margin: auto; width: 200px; border-radius: 25px; border: solid 2px #000; text-align: center; box-shadow: 0 3px 5px -2px #000; font-size: 20px; line-height: 35px; color: white; text-shadow: 0 0 5px #000; background-color: #7fb069; }
+.status-bar { font-family: 'Montserrat', sans-serif; align-self: center; margin: auto; margin-bottom: 35px; width: 200px; border-radius: 25px; text-align: center; box-shadow: 0 3px 5px -2px #000; font-size: 20px; line-height: 35px; color: white; text-shadow: 0 0 5px #000; background-color: #7fb069; }
 
 .preloader { pointer-events: none; z-index: 100; position: absolute; top: 0; bottom: 0; left: 0; right: 0; height: 100%; width: 100%; overflow: hidden; }
 
