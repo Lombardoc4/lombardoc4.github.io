@@ -55,6 +55,7 @@ p {
     border-radius: 50px;
     box-shadow: 0 2px 5px #000;
     text-align: center;
+    text-decoration: none;
     color: #ffffff;
 }
 
@@ -91,8 +92,10 @@ p {
 .status-bar{
     font-family: 'Montserrat', sans-serif;
     align-self: center;
-    margin: auto;
-    margin-bottom: 35px;
+    // margin: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+
     width: 200px;
     border-radius: 25px;
     // border: solid 2px #000;
@@ -101,7 +104,6 @@ p {
     font-size: 20px;
     line-height: 35px;
     color: white;
-    text-shadow: 0 0 5px #000;
     background-color: #7fb069;
 }
 
@@ -416,11 +418,13 @@ p {
     padding-bottom: 10px;
     width: 100%;
     display: flex;
-
+    justify-content: center;
     img{
         padding: 5px;
     }
 }
+
+
 
 .tooltip{
     visibility: hidden;
@@ -449,9 +453,11 @@ p {
 }
 
 .header-image{
-    height: 200px;
+    padding-top: 10px;
+    height: 100px;
     margin: auto;
 }
+
 
 .rnp{
     width: 80%;
@@ -658,9 +664,23 @@ p {
     justify-content: center;
 }
 .quote{
-    font-size: 25px;
+    font-size: 24px;
     font-style: italic;
     text-align: center;
+}
+.quotation{
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-size: 32px;
+}
+
+.quote-example{
+    display: flex;
+    & p{
+        max-width: 250px;
+        line-height: 1.5;
+    }
 }
 
 .restart{
@@ -669,11 +689,16 @@ p {
     background-position: 45%;
 }
 
+.contact-icon{
+    position: relative;
+    height: 100%;
+    padding: 5px;
+}
 
 .contact-header{
     /* width: 70%; */
     /* margin: auto; */
-    // border: solid 1px grey;
+    padding-top: 0;
     height: 200px;
     border-radius: 50%;
     margin-top: 15px;
@@ -749,11 +774,12 @@ p {
 
     .body-copy{
         align-self: center;
-        max-width: 450px;
-        padding-bottom: 20px;
+        max-width: 500px;
+        // padding-bottom: 20px;
         padding-top: 20px;
-        font-size: 24px;
-        line-height: 1;
+        font-size: 22px;
+        line-height: 1.25;
+
     }
 
     p{
@@ -776,7 +802,9 @@ p {
     }
 
     .button{
-        width: 300px
+        width: 250px;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
 
     .tool-row{
@@ -785,6 +813,19 @@ p {
 
     .mission{
         width: 50%;
+    }
+
+    .quote{
+        font-size: 32px;
+    }
+
+    .quotation{
+        font-size: 48px;
+    }
+
+    .quote-example p{
+        max-width: 400px;
+        line-height: 1.5;
     }
 
 }

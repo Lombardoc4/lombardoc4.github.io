@@ -189,23 +189,32 @@
             <span style="padding: 10px"></span>
             <h1 class="body-title">Contact</h1>
             <h2 class="body-subtitle">It's me, Cris Lombardo</h2>
+            <div class="toolbelt">
+                <div class="tool-row">
+                    <div class="contact-icon">
+                        <img class="tool" src="./images/email.png">
+                        <span class="tooltip">Email</span>
+                    </div>
+                    <div class="contact-icon">
+                        <img class="tool" src="./images/github.png">
+                        <span class="tooltip">Github</span>
+                    </div>
+                    <div class="contact-icon">
+                        <img class="tool" src="./images/linked.png">
+                        <span class="tooltip">Linked in</span>
+                    </div>
+                </div>
+            </div>
+
             <p class="body-copy">
                 I'm a Web Developer.<br>
-                I have a BS in Computer Science.<br>
                 I'm an Environmentalist.<br>
                 I'm Nice Guy Cris.<br>
                 I like to wonder why.<br>
             </p>
-            <!-- INSERT EMAIL IMAGE -->
-            <p class="body-copy">
-                Bigc4997@gmail.com
-            </p>
-            <!-- INSERT GITHUB IMAGE -->
-            <p class="body-copy">
-                github.com/lombardoc4
-            </p>
+
             <h2 class="body-subtitle">Reach out about:</h2>
-            <p class="body-copy">
+            <p class="body-copy" style="padding-top: 0;">
                 Web Dev Projects<br>
                 Planting/Garden Projects<br>
                 Energy Projects<br>
@@ -386,14 +395,22 @@
         <div class="info-body">
             <img class="header-image" src="./images/mqq2-2.png" alt="MQQ">
             <h1 class="body-title">Movie Quote Quiz</h1>
+
+                                    <!-- Provide some sort of work status -->
+            <!-- Make dynamic and changable in some sort of array in js -->
+            <!-- <div style="justify-content: center; align-items: center; display: flex;"> -->
+                <!-- <h2 style="text-align: center; padding: 5px;">Status: </h2> -->
+                <!-- <p class="status-bar">Ongoing</p> -->
+            <!-- </div> -->
+
             <p class="body-copy">
                 This game is meant for film freaks and movie geeks.
                 Play and test your knowledge of infamous film quotes.
                 Contribute and add your favorite quote to the fun.
             </p>
-            <div class="button button-primary" href="https://www.restorenativeplants.org/">
+            <a class="button button-primary" href="">
                 <p class="button-copy">PLAY NOW</p>
-            </div>
+            </a>
             <!-- Button <GO PLAY> -->
                 <!-- make gradient same as background-color -->
             <!--    On hover, hide shadow,
@@ -401,9 +418,18 @@
                     on mouse release show layer,
                     on no hover show shadow
             -->
+            <div class="quote-example">
+               <p class="quotation" style="margin-left: auto; align-self: flex-start; line-height: 1; ">"</p>
+               <p class="quote">I'm going to make him an offer he can't refuse</p>
+               <p class="quotation" style="margin-right: auto; align-self: flex-end; line-height: 1; ">"</p>
+            </div>
 
-
-            <img style="margin: auto; width: 90%; max-width: 300px;" src="./images/mqq-play.png" alt="MQQ Play">
+            <p class="body-copy">
+                This is one of my first apps creating using the MERN stack.
+                Learning about Components and Ajax calls stuck with me the most.
+                Making queries with a document based database was a challenge.
+            </p>
+            <!-- <img style="margin: auto; width: 90%; max-width: 300px;" src="./images/mqq-play.png" alt="MQQ Play"> -->
 
             <p style="text-align:center; font-size: 22px;  padding: 5px;">Tools:</p>
             <!-- <div class="">
@@ -441,21 +467,8 @@
                 </div>
             </div>
 
-            <p class="body-copy">
-                This is one of my first apps creating using the MERN stack.
-                Learning about Components and Ajax calls stuck with me the most.
-                Making queries with a document based database was a challenge.
-            </p>
-
-            <div class="button" href="https://github.com/Lombardoc4/MQQ"  style="background-color: #46b1dd; margin-bottom: 20px;">
+            <div class="button" href="https://github.com/Lombardoc4/MQQ" style="background-color: #46b1dd; margin-bottom: 20px;">
                 <p class="button-copy">GITHUB</p>
-            </div>
-
-                        <!-- Provide some sort of work status -->
-            <!-- Make dynamic and changable in some sort of array in js -->
-            <div>
-                <h2 style="text-align: center; padding: 5px;">Status: </h2 style="text-align: center;">
-                <p class="status-bar"> In Progress</p>
             </div>
         </div>
     </div>
@@ -513,10 +526,9 @@
                 The app is for plants lovers and greenhouse growers.
                 PEM keeps track of your plants and how the environment is treating them.
             </p>
-            <div class="button button-primary" href="https://www.restorenativeplants.org/">
-                <p class="button-copy">VIEW SAMPLE</p>
+            <div class="button button-primary" href="#">
+                <p class="button-copy">View Plants</p>
             </div>
-            <img style="margin: auto; width: 90%; max-width: 300px;" src="./images/pem-home.png" alt="PEM Home Page">
 
             <p style="text-align: center;" class="body-copy">
                 The Plant Environmental Monitor app is scoped for large grow operations, such as plant nurseries.
@@ -529,6 +541,8 @@
             <p style="text-align: center;" class="body-copy">
                 The hardware aspects track these conditions in real time.
             </p>
+
+            <img style="padding-bottom: 10px; margin: auto; width: 90%; max-width: 300px;" src="./images/pem-home.png" alt="PEM Home Page">
 
 
             <p style="text-align:center; font-size: 22px; padding: 5px;">Tools:</p>
@@ -561,12 +575,12 @@
                 </div>
             </div>
 
-            <div class="button" href="https://github.com/Lombardoc4/MQQ"  style="background-color: #EDe2de; margin-bottom: 20px;">
+            <div class="button" href="https://github.com/Lombardoc4/MQQ"  style="background-color: #46b1dd; margin-bottom: 20px;">
                 <p class="button-copy">GITHUB</p>
             </div>
 
-            <p style="text-align:center; font-size: 22px;">Status: </p>
-            <p class="status-bar"> In Progress</p>
+            <!-- <p style="text-align:center; font-size: 22px;">Status: </p>
+            <p class="status-bar"> In Progress</p> -->
 
         </div>
     </div>

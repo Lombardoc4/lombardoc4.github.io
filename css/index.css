@@ -10,7 +10,7 @@ p { font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 18px; }
 
 .d-none { display: none; }
 
-.button { margin: auto; margin-bottom: 15px; margin-top: 10px; width: 200px; padding-top: 10px; padding-bottom: 10px; border-radius: 50px; box-shadow: 0 2px 5px #000; text-align: center; color: #ffffff; }
+.button { margin: auto; margin-bottom: 15px; margin-top: 10px; width: 200px; padding-top: 10px; padding-bottom: 10px; border-radius: 50px; box-shadow: 0 2px 5px #000; text-align: center; text-decoration: none; color: #ffffff; }
 
 .button-primary { background-color: #f8c682; }
 
@@ -22,7 +22,7 @@ p { font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 18px; }
 
 .body-copy { line-height: 20px; padding-top: 20px; padding-left: 15px; padding-right: 20px; padding-bottom: 10px; max-width: 350px; }
 
-.status-bar { font-family: 'Montserrat', sans-serif; align-self: center; margin: auto; margin-bottom: 35px; width: 200px; border-radius: 25px; text-align: center; box-shadow: 0 3px 5px -2px #000; font-size: 20px; line-height: 35px; color: white; text-shadow: 0 0 5px #000; background-color: #7fb069; }
+.status-bar { font-family: 'Montserrat', sans-serif; align-self: center; margin-bottom: auto; margin-top: auto; width: 200px; border-radius: 25px; text-align: center; box-shadow: 0 3px 5px -2px #000; font-size: 20px; line-height: 35px; color: white; background-color: #7fb069; }
 
 .preloader { pointer-events: none; z-index: 100; position: absolute; top: 0; bottom: 0; left: 0; right: 0; height: 100%; width: 100%; overflow: hidden; }
 
@@ -100,7 +100,7 @@ p { font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 18px; }
 
 .toolbelt { width: 100%; display: flex; flex-direction: column; }
 
-.tool-row { height: 35px; padding-bottom: 10px; width: 100%; display: flex; }
+.tool-row { height: 35px; padding-bottom: 10px; width: 100%; display: flex; justify-content: center; }
 
 .tool-row img { padding: 5px; }
 
@@ -108,7 +108,7 @@ p { font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 18px; }
 
 .tool { position: relative; height: 100%; margin: auto; }
 
-.header-image { height: 200px; margin: auto; }
+.header-image { padding-top: 10px; height: 100px; margin: auto; }
 
 .rnp { width: 80%; margin: auto; padding: 20px; }
 
@@ -189,11 +189,19 @@ p { font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 18px; }
 
 #words { width: 95%; margin-top: 70px; display: flex; align-items: center; justify-content: center; }
 
-.quote { font-size: 25px; font-style: italic; text-align: center; }
+.quote { font-size: 24px; font-style: italic; text-align: center; }
+
+.quotation { font-weight: bold; font-family: 'Courier New', Courier, monospace; font-style: italic; font-size: 32px; }
+
+.quote-example { display: flex; }
+
+.quote-example p { max-width: 250px; line-height: 1.5; }
 
 .restart { background-image: url(../images/loading.png); background-size: 80%; background-position: 45%; }
 
-.contact-header { /* width: 70%; */ /* margin: auto; */ height: 200px; border-radius: 50%; margin-top: 15px; margin-bottom: 15px; box-shadow: 0 0 10px; }
+.contact-icon { position: relative; height: 100%; padding: 5px; }
+
+.contact-header { /* width: 70%; */ /* margin: auto; */ padding-top: 0; height: 200px; border-radius: 50%; margin-top: 15px; margin-bottom: 15px; box-shadow: 0 0 10px; }
 
 .adventure { background-image: url("../images/adventure.jpg"); background-position: 20% 55%; background-size: 120%; }
 
@@ -215,12 +223,15 @@ p { font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 18px; }
 @media only screen and (min-width: 600px) { .folder-content { width: 100%; max-width: 600px; }
   .open-file, .open-info, .open-folder { max-width: 600px; }
   .open-file { top: 15%; height: 60vh; }
-  .body-copy { align-self: center; max-width: 450px; padding-bottom: 20px; padding-top: 20px; font-size: 24px; line-height: 1; }
+  .body-copy { align-self: center; max-width: 500px; padding-top: 20px; font-size: 22px; line-height: 1.25; }
   p { font-weight: 200; }
   .body-title, .body-subtitle { align-self: center; }
   #Contact, .Contact { max-width: 300px; }
   #Contact .body-title, #Contact .body-subtitle, #Contact .body-copy, .Contact .body-title, .Contact .body-subtitle, .Contact .body-copy { align-self: baseline; }
   .open-menu { width: 40vw; }
-  .button { width: 300px; }
+  .button { width: 250px; padding-top: 15px; padding-bottom: 15px; }
   .tool-row { height: 50px; }
-  .mission { width: 50%; } }
+  .mission { width: 50%; }
+  .quote { font-size: 32px; }
+  .quotation { font-size: 48px; }
+  .quote-example p { max-width: 400px; line-height: 1.5; } }
