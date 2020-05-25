@@ -485,17 +485,25 @@ p {
 // ~~~~~~~~~~~~~~~~~~~~~~~~~
 // Info Animations
 // ~~~~~~~~~~~~~~~~~~~~~~~~~
+.fade-in{
+    opacity: 0;
+    &.on {
+        transition: opacity 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.25);
+        opacity: 1;
+    }
+}
+
 .spin-in{
     transform: scale(0) rotate(360deg);
      &.on {
-         transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.25);
+         transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.25);
          transform: scale(1) rotate(0);
      }
 }
 .slide-in{
     transform: translateY(-100px);
      &.on {
-         transition: all 0.6s ease-out;
+         transition: transform 0.6s ease-out;
          transform: translateY(0);
      }
 }
@@ -503,7 +511,7 @@ p {
     transform: scale(0);
 
      &.on {
-         transition: all 1s 0.6s linear;
+         transition: transform 1s 0.6s linear;
          transform: scale(1);
     }
 }

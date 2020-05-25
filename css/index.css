@@ -118,17 +118,21 @@ p { font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 18px; }
 
 .prop-logo.on { transition: all 1.5s 1s ease-out; transform: scale(1); }
 
+.fade-in { opacity: 0; }
+
+.fade-in.on { transition: opacity 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.25); opacity: 1; }
+
 .spin-in { transform: scale(0) rotate(360deg); }
 
-.spin-in.on { transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.25); transform: scale(1) rotate(0); }
+.spin-in.on { transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.25); transform: scale(1) rotate(0); }
 
 .slide-in { transform: translateY(-100px); }
 
-.slide-in.on { transition: all 0.6s ease-out; transform: translateY(0); }
+.slide-in.on { transition: transform 0.6s ease-out; transform: translateY(0); }
 
 .scale-in { transform: scale(0); }
 
-.scale-in.on { transition: all 1s 0.6s linear; transform: scale(1); }
+.scale-in.on { transition: transform 1s 0.6s linear; transform: scale(1); }
 
 .spin-out-propeller { position: absolute; z-index: 1; opacity: 1; }
 

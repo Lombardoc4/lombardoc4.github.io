@@ -3,7 +3,7 @@ const conf = {
     // expand art a lot
     graphics: ['dalia.jpg', 'heart.jpeg', 'illuminat.jpeg', 'lomLogo.jpg', 'mirage.jpg', 'scrub.jpeg', 'x1.jpg', 'x4.jpg', 'x9.jpg', 'x16.jpg'],
     nature:   [
-        // 'EvolutionUrbanGrows.info',
+        'EvolutionUrbanGrows.info',
         // 'RestoreNativePlants.info',
         // 'ThePlantGroup.info'
     ], // Future : ThePlantGroup.info, HarlemGrown.info
